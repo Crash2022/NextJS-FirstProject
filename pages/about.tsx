@@ -1,8 +1,9 @@
+import s from '../styles/About.module.css'
+
 const About = () => {
 
     return (
-        <div>
-            <h1>About Us</h1>
+        <div className={s.aboutBox}>
             <div>Lorem</div>
         </div>
     )

@@ -1,9 +1,12 @@
 .main {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  /*padding: 6rem;*/
-  min-height: 95vh;
+  flex-direction: column;
   margin-top: 30px;
+}
+
+.main img {
+  margin-top: 20px;
+  max-width: 1000px;
+  height: auto;
 }

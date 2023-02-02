@@ -1,13 +1,14 @@
-import styles from '@/styles/Home.module.css'
-import {Header} from '@/components/header';
-import {Footer} from '@/components/footer';
+import s from '@/styles/Home.module.css'
 
 export default function Home() {
     return (
         <>
-            <main className={styles.main}>
+            <main className={s.main}>
                 <div>
-                    NextJS
+                    <h1>Free Your Mind</h1>
+                </div>
+                <div>
+                    <img src="/images/main-01.jpg" alt="home-image"/>
                 </div>
             </main>
         </>

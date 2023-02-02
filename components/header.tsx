@@ -6,7 +6,7 @@ export const Header = () => {
     return (
         <header className={s.header}>
             <div className={s.header_logo}>
-                <img src="/bicycle-03.svg" alt="header_logo"/>
+                <img src="/icons/bicycle-03.svg" alt="header_logo"/>
             </div>
             <nav className={s.navigation}>
                 <div>
