@@ -1,0 +1,23 @@
+.header {
+    display: flex;
+    align-items: center;
+}
+
+.header_logo {
+
+}
+
+.header_logo img {
+    width: 100px;
+    height: 100px;
+}
+
+.navigation {
+    display: flex;
+    margin-left: 20px;
+}
+
+.navigation div {
+    padding: 10px;
+    font-size: 20px;
+}
