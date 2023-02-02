@@ -5,7 +5,7 @@ export default function Home() {
         <>
             <main className={s.main}>
                 <div>
-                    <h1>Free Your Mind</h1>
+                    <h1>Progress Anywhere Anytime</h1>
                 </div>
                 <div>
                     <img src="/images/main-01.jpg" alt="home-image"/>
