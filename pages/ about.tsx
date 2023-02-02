@@ -1,4 +1,4 @@
-function About() {
+const AboutPage = () => {
 
     return (
         <div>
@@ -8,4 +8,4 @@ function About() {
     )
 }
 
-export default About
+export default AboutPage
