@@ -1,6 +1,7 @@
-import s from '@/components/Header.module.css'
+import s from 'styles/Header.module.css'
+import Link from 'next/link'
 
-const Header = () => {
+export const Header = () => {
 
     return (
         <header className={s.header}>
@@ -9,17 +10,21 @@ const Header = () => {
             </div>
             <nav className={s.navigation}>
                 <div>
-                    <a href="">Home</a>
+                    <Link href='/'>
+                        Home
+                    </Link>
                 </div>
                 <div>
-                    <a href="">Catalog</a>
+                    <Link href='/bikes'>
+                        Bikes
+                    </Link>
                 </div>
                 <div>
-                    <a href="">About Us</a>
+                    <Link href='/about'>
+                        About Us
+                    </Link>
                 </div>
             </nav>
         </header>
     )
 }
-
-export default Header
