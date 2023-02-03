@@ -20,6 +20,11 @@ export const Header = () => {
                     </Link>
                 </div>
                 <div>
+                    <Link href='/reviews'>
+                        Reviews
+                    </Link>
+                </div>
+                <div>
                     <Link href='/about'>
                         About Us
                     </Link>

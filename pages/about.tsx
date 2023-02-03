@@ -1,11 +1,19 @@
+import Head from 'next/head'
+import React from 'react'
 import s from '../styles/About.module.css'
 
 const About = () => {
 
     return (
-        <div className={s.aboutBox}>
-            <div>Lorem</div>
-        </div>
+        <>
+            <Head>
+                <title>Info about our company | About </title>
+                <meta name='title' content='Info about our company'/>
+            </Head>
+            <div className='commonFlex'>
+                <h1>About</h1>
+            </div>
+        </>
     )
 }
 

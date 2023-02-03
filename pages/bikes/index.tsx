@@ -1,11 +1,19 @@
+import Head from 'next/head'
+import React from 'react'
 import s from '../../styles/Bikes.module.css'
 
 const Bikes = () => {
 
     return (
-        <div className={s.bikesBox}>
-            <h1>All Bikes</h1>
-        </div>
+        <>
+            <Head>
+                <title>Our products | Bikes </title>
+                <meta name='title' content='Our products'/>
+            </Head>
+            <div className='commonFlex'>
+                <h1>All Bikes</h1>
+            </div>
+        </>
     )
 }
 

@@ -71,6 +71,16 @@ img {vertical-align: top;}*/
   overflow: hidden;
 }
 
+/*---------------Common---------------*/
+
+.commonFlex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
 /*---------------Not Found---------------*/
 
 .notFound {
