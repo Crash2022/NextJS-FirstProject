@@ -1,7 +1,7 @@
 import React from 'react'
-import {ReactNode} from 'react';
-import {Header} from '@/components/header';
-import {Footer} from '@/components/footer';
+import {ReactNode} from 'react'
+import {Header} from '@/components/header'
+import {Footer} from '@/components/footer'
 import s from '../styles/Layout.module.css'
 
 type LayoutPropsType = {
