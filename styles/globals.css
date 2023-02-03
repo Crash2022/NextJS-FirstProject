@@ -109,3 +109,16 @@ img {vertical-align: top;}*/
 .notFoundImage img {
   width: 40vw;
 }
+
+/*---------------Items---------------*/
+
+.mappedBox {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 1200px;
+}
+
+.blockTitle {
+  margin-bottom: 20px;
+}

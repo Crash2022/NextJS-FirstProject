@@ -1,13 +1,13 @@
-.title {
-    margin-bottom: 20px;
-}
+/*.title {*/
+/*    margin-bottom: 20px;*/
+/*}*/
 
-.reviewBox {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    max-width: 1200px;
-}
+/*.reviewBox {*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    flex-wrap: wrap;*/
+/*    max-width: 1200px;*/
+/*}*/
 
 .responseItem {
     display: flex;

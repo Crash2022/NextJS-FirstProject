@@ -1,0 +1,36 @@
+.responseItem {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    box-shadow: 3px 3px 10px black;
+}
+
+.responseItem_infoBlock {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.responseItem_title {
+
+}
+
+.responseItem_description {
+
+}
+
+.responseItem_price {
+    font-weight: bold;
+}
+
+.responseItem_image {
+
+}
+.responseItem_image img {
+    width: 300px;
+    height: auto;
+}

@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import React from 'react'
 import s from '../../styles/Bikes.module.css'
+import {Loader} from "@/public/components/loader/loader";
 
 export type BikesPropsType = {
     bikes: Array<BikeType>
@@ -16,25 +17,47 @@ export type BikeType = {
 
 const Bikes: React.FC<BikesPropsType> = ({bikes}) => {
 
-    console.log(bikes)
+    // console.log(bikes)
 
-    return (
-        <>
-            <Head>
-                <title>Our products | Bikes </title>
-                <meta name='title' content='Our products'/>
-            </Head>
-            <div className='commonFlex'>
-                <h1>Our Products</h1>
-            </div>
-        </>
-    )
+    if (!bikes) {
+        return <Loader/>
+    } else {
+        return (
+            <>
+                <Head>
+                    <title>Our products | Bikes </title>
+                    <meta name='title' content='Our products'/>
+                </Head>
+                <div className='commonFlex'>
+                    <h1 className='blockTitle'>Our Products</h1>
+                    <div className='mappedBox'>
+                        {
+                            bikes.map(bike => {
+                                return (
+                                    <div className={s.responseItem} key={bike.id}>
+                                        <div className={s.responseItem_infoBlock}>
+                                            <div className={s.responseItem_title}>{bike.name}</div>
+                                            <div className={s.responseItem_description}>{bike.description}</div>
+                                            <div className={s.responseItem_price}>${bike.price}</div>
+                                        </div>
+                                        <div className={s.responseItem_image}>
+                                            <img src={bike.image} alt='userPhoto'/>
+                                        </div>
+                                    </div>
+                                )
+                            })
+                        }
+                    </div>
+                </div>
+            </>
+        )
+    }
 }
 
 export default Bikes
 
 // SSR
-export const getStaticProps = async() => {
+export const getStaticProps = async () => {
     const response = await fetch('http://localhost:5000/items')
     const data: Array<BikeType> = await response.json()
     // console.log(data)

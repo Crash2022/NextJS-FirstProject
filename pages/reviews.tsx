@@ -33,7 +33,7 @@ const Reviews: React.FC<ReviewsPropsType> = ({data} ) => {
     // }, [])
 
 
-    if (!data.length) {
+    if (!data) {
         return <Loader/>
     } else {
         return (
@@ -43,8 +43,8 @@ const Reviews: React.FC<ReviewsPropsType> = ({data} ) => {
                     <meta name='title' content='Comments to bikes'/>
                 </Head>
                 <div className='commonFlex'>
-                    <h1 className={s.title}>Reviews</h1>
-                    <div className={s.reviewBox}>
+                    <h1 className='blockTitle'>Reviews</h1>
+                    <div className='mappedBox'>
                         {
                             data.map(photo => {
                                 return (
