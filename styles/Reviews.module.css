@@ -12,6 +12,7 @@
 .responseItem {
     display: flex;
     flex-direction: row-reverse;
+    align-items: center;
     border: 1px solid black;
     border-radius: 5px;
     padding: 10px;
@@ -24,5 +25,5 @@
 }
 
 .responseItem_image img {
-    border-radius: 5px;
+    border-radius: 50%;
 }

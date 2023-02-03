@@ -11,7 +11,7 @@ const Bikes = () => {
                 <meta name='title' content='Our products'/>
             </Head>
             <div className='commonFlex'>
-                <h1>All Bikes</h1>
+                <h1>Our Products</h1>
             </div>
         </>
     )
