@@ -32,7 +32,6 @@ const Reviews: React.FC<ReviewsPropsType> = ({data} ) => {
     //         })
     // }, [])
 
-
     if (!data) {
         return <Loader/>
     } else {
