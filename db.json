@@ -3,21 +3,21 @@
     {
       "id": "111",
       "name": "Specialized Basic",
-      "description": "Not bad bike",
+      "description": "Fast - it’s what wins the day, plain and simple. Making the fastest downhill bike even faster? Not so simple. The Demo that we gave you last year – a bike that delivered both the Downhill World Championship and overall World Cup titles in its first season – is back with a new mix-wheel configuration that gives you the same winning setup as our Gravity Team. Full-gas. Full-fast.",
       "price": 1000,
       "image": "/catalog/specialized-01.jpg"
     },
     {
       "id": "222",
       "name": "Specialized Pro",
-      "description": "All mountain bike",
+      "description": "When races are won and lost by fractions of a second, riders get particular about their bikes. Which explains why we spent years field-testing prototypes, nerd’ing out on the R&D, and testing various wheel and geometry setups in World Cup events. It might seem excessive, but when your R&D team has some of the best riders on earth, you listen. They know fast.",
       "price": 1500,
       "image": "/catalog/specialized-02.jpg"
     },
     {
       "id": "333",
       "name": "Specialized Custom",
-      "description": "Bike for any choice",
+      "description": "We specifically designed the Demo geometry to create a ride that’s both fast and playful. A new horst pivot adjustment allows for three different geo configurations that adjust chainstay length and BB height-short, mid, and long. From the astounding results of the Specialized Gravity Team in 2019, Demo comes stock with a 29 front, 27.5 rear wheel setup, but these adjustments let you choose the wheel size that’s best for your ride.",
       "price": 2500,
       "image": "/catalog/specialized-03.jpg"
     }

@@ -4,27 +4,31 @@
     border-radius: 5px;
     padding: 10px;
     box-shadow: 3px 3px 10px black;
+    width: 900px;
 }
 
 .detailsItem_image {
 
 }
 .detailsItem_image img {
-    width: 500px;
+    width: 600px;
     height: auto;
 }
 
 .detailsItem_infoBlock {
     display: flex;
     flex-direction: column;
-    margin-left: 10px;
+    margin-left: 15px;
 }
 
 .detailsItem_title {
-
+    font-weight: bold;
+    font-size: 30px;
+    margin: 20px 0;
 }
 .detailsItem_price {
-
+    font-size: 20px;
+    margin-bottom: 30px;
 }
 .detailsItem_description {
 

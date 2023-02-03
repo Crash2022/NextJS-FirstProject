@@ -23,7 +23,7 @@ export const getStaticProps = async(context: {params: { id: string }}) => {
     const id = context.params.id
 
     const response = await fetch(`http://localhost:5000/items/${id}`)
-    const data: Array<BikeType> = await response.json()
+    const data: BikeType = await response.json()
 
     return {
         props: {bikes: data}
@@ -31,25 +31,25 @@ export const getStaticProps = async(context: {params: { id: string }}) => {
 }
 
 
-const Details: React.FC<BikesPropsType> = ({bikes}) => {
+const Details = ({bikes}: any) => {
 
     console.log('details',bikes)
 
     return (
         <div className='commonFlex'>
             <div>
-                <h1>Specialized - american quality!</h1>
+                <h1 className='blockTitle'>Specialized - american quality!</h1>
             </div>
-            {/*<div className={s.detailsItem}>*/}
-            {/*    <div className={s.detailsItem_image}>*/}
-            {/*        <img src={bikes.image} alt='bike-photo'/>*/}
-            {/*    </div>*/}
-            {/*    <div className={s.detailsItem_infoBlock}>*/}
-            {/*        <div className={s.detailsItem_title}>{bikes.name}</div>*/}
-            {/*        <div className={s.detailsItem_price}>${bikes.price}</div>*/}
-            {/*        <div className={s.detailsItem_description}>{bikes.description}</div>*/}
-            {/*    </div>*/}
-            {/*</div>*/}
+            <div className={s.detailsItem}>
+                <div className={s.detailsItem_image}>
+                    <img src={bikes.image} alt='bike-photo'/>
+                </div>
+                <div className={s.detailsItem_infoBlock}>
+                    <div className={s.detailsItem_title}>{bikes.name}</div>
+                    <div className={s.detailsItem_price}>${bikes.price}</div>
+                    <div className={s.detailsItem_description}>{bikes.description}</div>
+                </div>
+            </div>
         </div>
     )
 }
