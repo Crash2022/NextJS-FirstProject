@@ -2,7 +2,21 @@ import Head from 'next/head'
 import React from 'react'
 import s from '../../styles/Bikes.module.css'
 
-const Bikes = () => {
+export type BikesPropsType = {
+    bikes: Array<BikeType>
+}
+
+export type BikeType = {
+    id: string
+    name: string
+    description: string
+    price: number
+    image: string
+}
+
+const Bikes: React.FC<BikesPropsType> = ({bikes}) => {
+
+    console.log(bikes)
 
     return (
         <>
@@ -18,3 +32,20 @@ const Bikes = () => {
 }
 
 export default Bikes
+
+// SSR
+export const getStaticProps = async() => {
+    const response = await fetch('http://localhost:5000/items')
+    const data: Array<BikeType> = await response.json()
+    // console.log(data)
+
+    if (!data) {
+        return {
+            notFound: true,
+        }
+    }
+
+    return {
+        props: {bikes: data}
+    }
+}
