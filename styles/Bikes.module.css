@@ -16,15 +16,13 @@
 }
 
 .responseItem_title {
-
-}
-
-.responseItem_description {
-
+    font-size: 20px;
+    margin-bottom: 5px;
 }
 
 .responseItem_price {
     font-weight: bold;
+    font-size: 18px;
 }
 
 .responseItem_image {

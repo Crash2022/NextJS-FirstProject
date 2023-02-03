@@ -37,11 +37,10 @@ const Bikes: React.FC<BikesPropsType> = ({bikes}) => {
                                     <div className={s.responseItem} key={bike.id}>
                                         <div className={s.responseItem_infoBlock}>
                                             <div className={s.responseItem_title}>{bike.name}</div>
-                                            <div className={s.responseItem_description}>{bike.description}</div>
                                             <div className={s.responseItem_price}>${bike.price}</div>
                                         </div>
                                         <div className={s.responseItem_image}>
-                                            <img src={bike.image} alt='userPhoto'/>
+                                            <img src={bike.image} alt='bike-photo'/>
                                         </div>
                                     </div>
                                 )

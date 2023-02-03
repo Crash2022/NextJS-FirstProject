@@ -1,21 +1,21 @@
 {
   "items" : [
     {
-      "id": "001",
+      "id": "111",
       "name": "Specialized Basic",
       "description": "Not bad bike",
       "price": 1000,
       "image": "/catalog/specialized-01.jpg"
     },
     {
-      "id": "002",
+      "id": "222",
       "name": "Specialized Pro",
       "description": "All mountain bike",
       "price": 1500,
       "image": "/catalog/specialized-02.jpg"
     },
     {
-      "id": "003",
+      "id": "333",
       "name": "Specialized Custom",
       "description": "Bike for any choice",
       "price": 2500,

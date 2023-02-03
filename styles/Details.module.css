@@ -1,0 +1,31 @@
+.detailsItem {
+    display: flex;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 3px 3px 10px black;
+}
+
+.detailsItem_image {
+
+}
+.detailsItem_image img {
+    width: 500px;
+    height: auto;
+}
+
+.detailsItem_infoBlock {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}
+
+.detailsItem_title {
+
+}
+.detailsItem_price {
+
+}
+.detailsItem_description {
+
+}

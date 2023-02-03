@@ -16,7 +16,7 @@ export type DataPhotoType = {
     thumbnailUrl: string
 }
 
-const Reviews: React.FC<ReviewsPropsType> = ({data} ) => {
+const Reviews: React.FC<ReviewsPropsType> = ({data}) => {
 // const Reviews = ({data}: InferGetServerSidePropsType<typeof getServerSideProps>) => {
 
     // const [photos, setPhotos] = useState<Array<PhotoType>>([])
