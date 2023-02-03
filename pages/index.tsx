@@ -7,7 +7,7 @@ export default function Home() {
                 <div>
                     <h1>Progress Anywhere Anytime</h1>
                 </div>
-                <div>
+                <div className={s.mainImage}>
                     <img src="/images/main-01.jpg" alt="home-image"/>
                 </div>
             </main>

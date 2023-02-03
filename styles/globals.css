@@ -1,3 +1,5 @@
+/*---------------Base styles---------------*/
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -56,6 +58,8 @@ button::-moz-focus-inner {padding:0;border:0;}
 ul li {list-style: none;}
 img {vertical-align: top;}*/
 
+/*---------------Main---------------*/
+
 .container {
   /*background-color: green;*/
 
@@ -66,6 +70,8 @@ img {vertical-align: top;}*/
   margin: 0 auto;
   overflow: hidden;
 }
+
+/*---------------Not Found---------------*/
 
 .notFound {
   display: flex;
@@ -88,4 +94,8 @@ img {vertical-align: top;}*/
   text-decoration: underline;
   color: blue;
   font-size: 18px;
+}
+
+.notFoundImage img {
+  width: 40vw;
 }

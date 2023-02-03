@@ -26,9 +26,9 @@ const NotFoundPage = () => {
                 <Link href='/'>
                     Home Page
                 </Link>
-                <span> after 3 seconds...</span>
+                <span> after 5 seconds...</span>
             </div>
-            <div>
+            <div className="notFoundImage">
                 <img src="/images/error404.jpg" alt="page404"/>
             </div>
         </div>
