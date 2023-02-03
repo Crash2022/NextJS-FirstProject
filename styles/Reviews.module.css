@@ -22,3 +22,7 @@
 .responseItem_title {
     margin-left: 10px;
 }
+
+.responseItem_image img {
+    border-radius: 5px;
+}
