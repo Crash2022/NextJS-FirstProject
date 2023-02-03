@@ -1,4 +1,4 @@
-import {BikesPropsType, BikeType} from '@/pages/bikes/index';
+import {BikeType} from '@/pages/bikes/index';
 import s from '../../styles/Details.module.css'
 import React from 'react';
 
@@ -26,14 +26,21 @@ export const getStaticProps = async(context: {params: { id: string }}) => {
     const data: BikeType = await response.json()
 
     return {
-        props: {bikes: data}
+        props: {bike: data}
     }
 }
 
+type DetailsBikeType = {
+    bike: {
+        id: string
+        name: string
+        description: string
+        price: number
+        image: string
+    }
+}
 
-const Details = ({bikes}: any) => {
-
-    console.log('details',bikes)
+const Details = ({bike}: DetailsBikeType) => {
 
     return (
         <div className='commonFlex'>
@@ -42,12 +49,12 @@ const Details = ({bikes}: any) => {
             </div>
             <div className={s.detailsItem}>
                 <div className={s.detailsItem_image}>
-                    <img src={bikes.image} alt='bike-photo'/>
+                    <img src={bike.image} alt='bike-photo'/>
                 </div>
                 <div className={s.detailsItem_infoBlock}>
-                    <div className={s.detailsItem_title}>{bikes.name}</div>
-                    <div className={s.detailsItem_price}>${bikes.price}</div>
-                    <div className={s.detailsItem_description}>{bikes.description}</div>
+                    <div className={s.detailsItem_title}>{bike.name}</div>
+                    <div className={s.detailsItem_price}>${bike.price}</div>
+                    <div className={s.detailsItem_description}>{bike.description}</div>
                 </div>
             </div>
         </div>
