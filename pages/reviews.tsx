@@ -64,6 +64,7 @@ const Reviews = ({data}: ReviewsPropsType) => {
     }
 }
 
+// SSR
 export async function getServerSideProps() {
     const response = await fetch('https://jsonplaceholder.typicode.com/photos?_limit=9')
     const data: Array<DataPhotoType> = await response.json()
