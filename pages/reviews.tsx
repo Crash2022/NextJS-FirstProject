@@ -17,6 +17,7 @@ export type DataPhotoType = {
 }
 
 const Reviews: React.FC<ReviewsPropsType> = ({data}) => {
+// вариант из документации
 // const Reviews = ({data}: InferGetServerSidePropsType<typeof getServerSideProps>) => {
 
     // const [photos, setPhotos] = useState<Array<PhotoType>>([])
@@ -66,7 +67,7 @@ const Reviews: React.FC<ReviewsPropsType> = ({data}) => {
 export default Reviews
 
 // SSR
-export const getServerSideProps = async() => {
+export const getServerSideProps: GetServerSideProps<{ data: Array<DataPhotoType> }> = async() => {
     const response = await fetch('https://jsonplaceholder.typicode.com/photos?_limit=9')
     const data: Array<DataPhotoType> = await response.json()
 

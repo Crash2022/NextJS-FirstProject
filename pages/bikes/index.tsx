@@ -2,6 +2,7 @@ import Head from 'next/head'
 import React from 'react'
 import s from '../../styles/Bikes.module.css'
 import {Loader} from "@/public/components/loader/loader";
+import {GetStaticProps} from "next";
 
 export type BikesPropsType = {
     bikes: Array<BikeType>
@@ -56,10 +57,9 @@ const Bikes: React.FC<BikesPropsType> = ({bikes}) => {
 export default Bikes
 
 // SSR
-export const getStaticProps = async () => {
+export const getStaticProps: GetStaticProps<{bikes: Array<BikeType>}> = async () => {
     const response = await fetch('http://localhost:5000/items')
     const data: Array<BikeType> = await response.json()
-    // console.log(data)
 
     if (!data) {
         return {
