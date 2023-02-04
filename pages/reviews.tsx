@@ -43,7 +43,7 @@ const Reviews: React.FC<ReviewsPropsType> = ({data}) => {
                     <meta name='title' content='Comments to bikes'/>
                 </Head>
                 <div className='commonFlex'>
-                    <h1 className='blockTitle'>Reviews</h1>
+                    <h1 className='blockTitle'>Our riders</h1>
                     <div className='mappedBox'>
                         {
                             data.map(photo => {
@@ -68,7 +68,7 @@ export default Reviews
 
 // SSR
 export const getServerSideProps: GetServerSideProps<{ data: Array<DataPhotoType> }> = async() => {
-    const response = await fetch('https://jsonplaceholder.typicode.com/photos?_limit=9')
+    const response = await fetch('https://jsonplaceholder.typicode.com/photos?_limit=6')
     const data: Array<DataPhotoType> = await response.json()
 
     if (!data) {

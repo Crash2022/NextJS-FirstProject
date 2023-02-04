@@ -2,7 +2,7 @@ import {BikeType} from '@/pages/bikes/index';
 import s from '../../styles/Details.module.css'
 import React from 'react';
 
-export const getStaticPaths = async() => {
+export const getStaticPaths = async () => {
     const response = await fetch('http://localhost:5000/items')
     const data: Array<BikeType> = await response.json()
 
@@ -19,7 +19,7 @@ export const getStaticPaths = async() => {
     }
 }
 
-export const getStaticProps = async(context: {params: { id: string }}) => {
+export const getStaticProps = async (context: { params: { id: string } }) => {
     const id = context.params.id
 
     const response = await fetch(`http://localhost:5000/items/${id}`)

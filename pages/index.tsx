@@ -17,7 +17,7 @@ export default function Home ({src, width, height}: HomePropsType) {
             </Head>
             <main className={s.main}>
                 <div>
-                    <h1>Progress Anywhere Anytime</h1>
+                    <h1 className='blockTitle'>Progress Anywhere Anytime</h1>
                 </div>
                 <div className={s.mainImage}>
                     <img src='/images/main-01.jpg' alt='home-image'/>

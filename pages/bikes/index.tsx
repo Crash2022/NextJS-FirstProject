@@ -3,6 +3,7 @@ import React from 'react'
 import s from '../../styles/Bikes.module.css'
 import {Loader} from "@/public/components/loader/loader";
 import {GetStaticProps} from "next";
+import Link from "next/link";
 
 export type BikesPropsType = {
     bikes: Array<BikeType>
@@ -17,8 +18,6 @@ export type BikeType = {
 }
 
 const Bikes: React.FC<BikesPropsType> = ({bikes}) => {
-
-    // console.log(bikes)
 
     if (!bikes) {
         return <Loader/>
@@ -35,15 +34,17 @@ const Bikes: React.FC<BikesPropsType> = ({bikes}) => {
                         {
                             bikes.map(bike => {
                                 return (
-                                    <div className={s.responseItem} key={bike.id}>
-                                        <div className={s.responseItem_infoBlock}>
-                                            <div className={s.responseItem_title}>{bike.name}</div>
-                                            <div className={s.responseItem_price}>${bike.price}</div>
+                                    <Link href={`/bikes/${bike.id}`} key={bike.id}>
+                                        <div className={s.responseItem}>
+                                            <div className={s.responseItem_infoBlock}>
+                                                <div className={s.responseItem_title}>{bike.name}</div>
+                                                <div className={s.responseItem_price}>${bike.price}</div>
+                                            </div>
+                                            <div className={s.responseItem_image}>
+                                                <img src={bike.image} alt='bike-photo'/>
+                                            </div>
                                         </div>
-                                        <div className={s.responseItem_image}>
-                                            <img src={bike.image} alt='bike-photo'/>
-                                        </div>
-                                    </div>
+                                    </Link>
                                 )
                             })
                         }
@@ -57,7 +58,7 @@ const Bikes: React.FC<BikesPropsType> = ({bikes}) => {
 export default Bikes
 
 // SSR
-export const getStaticProps: GetStaticProps<{bikes: Array<BikeType>}> = async () => {
+export const getStaticProps: GetStaticProps<{ bikes: Array<BikeType> }> = async () => {
     const response = await fetch('http://localhost:5000/items')
     const data: Array<BikeType> = await response.json()
 
