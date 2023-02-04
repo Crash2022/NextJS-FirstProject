@@ -19,6 +19,7 @@ export const getStaticPaths = async () => {
     }
 }
 
+// генерация статических страниц один раз при сборке сайта
 export const getStaticProps = async (context: { params: { id: string } }) => {
     const id = context.params.id
 

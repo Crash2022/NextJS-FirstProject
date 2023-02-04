@@ -57,7 +57,7 @@ const Bikes: React.FC<BikesPropsType> = ({bikes}) => {
 
 export default Bikes
 
-// SSR
+// SSR - получение страницы сразу со всеми данными html
 export const getStaticProps: GetStaticProps<{ bikes: Array<BikeType> }> = async () => {
     const response = await fetch('http://localhost:5000/items')
     const data: Array<BikeType> = await response.json()
