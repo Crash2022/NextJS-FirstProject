@@ -66,7 +66,7 @@ const Reviews: React.FC<ReviewsPropsType> = ({data}) => {
 
 export default Reviews
 
-// SSR
+// если не нужны динамические адреса, то можно пользоваться getStaticProps
 export const getServerSideProps: GetServerSideProps<{ data: Array<DataPhotoType> }> = async() => {
     const response = await fetch('https://jsonplaceholder.typicode.com/photos?_limit=6')
     const data: Array<DataPhotoType> = await response.json()
