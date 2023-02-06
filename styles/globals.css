@@ -14,7 +14,7 @@ body {
   width: 100%;
 }
 
- #__next {
+#__next {
    height: 100%; width: 100%;
 }
 
@@ -33,12 +33,9 @@ a {
 /*---------------Main---------------*/
 
 .container {
-  /*background-color: green;*/
-
-  /*max-width: 1200px;*/
+  /*max-width: 1200px;*/ /*если нужно ограничить по ширине*/
   max-width: 100vw;
-  /*min-height: 100vh;*/
-  min-height: 100%;
+  height: 100%; /*чтобы прибить футер к низу*/
   margin: 0 auto;
   overflow: hidden;
 }

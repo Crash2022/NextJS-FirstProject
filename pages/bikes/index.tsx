@@ -1,9 +1,9 @@
 import Head from 'next/head'
 import React from 'react'
 import s from '../../styles/Bikes.module.css'
-import {Loader} from "@/public/components/loader/loader";
-import {GetStaticProps} from "next";
-import Link from "next/link";
+import {Loader} from '@/public/components/loader/loader'
+import {GetStaticProps} from 'next'
+import Link from 'next/link'
 
 export type BikesPropsType = {
     bikes: Array<BikeType>

@@ -1,8 +1,6 @@
-import {BikeType} from '@/pages/bikes/index';
 import s from '../../styles/Details.module.css'
-import React from 'react';
-import {GetServerSideProps} from "next";
-import {DataPhotoType} from "@/pages/reviews";
+import React from 'react'
+import {DataPhotoType} from '@/pages/reviews'
 
 type DetailsBikeType = {
     bike: {
